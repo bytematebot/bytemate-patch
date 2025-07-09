@@ -50,7 +50,7 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           command: sdist
-          args: --out dist --features python
+          args: --out dist
 
       - name: Upload sdist
         uses: actions/upload-artifact@v4
@@ -58,6 +58,7 @@ jobs:
           name: sdist
           path: dist
           retention-days: 7
+
   wasm-packages:
     runs-on: ubuntu-latest
     strategy:
@@ -130,7 +131,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: release
     permissions:
-      id-token: write  # For trusted publishing
+      id-token: write
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v4
@@ -177,7 +178,6 @@ jobs:
       - name: Publish web package
         run: |
           cd wasm-web
-          # Update package.json for web variant
           jq '.name = "bytemate-patch-web"' package.json > package.json.tmp
           mv package.json.tmp package.json
           npm publish --access public
