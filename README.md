@@ -706,3 +706,5 @@ Open an issue or PR on [GitHub](https://github.com/bytematebot/bytemate-patch).
 
 **Built with ❤️ and an unhealthy obsession with performance.**
 
+## Acknowledgments
+This project was inspired by the [PODPORA:PATCH](https://github.com/StartITBot/podpora-patch) format and aims to provide a high-performance Rust implementation with Python bindings.

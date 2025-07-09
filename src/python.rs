@@ -139,7 +139,7 @@ impl PyBytematePatch {
         let merged = BytematePatch::merge(minor.inner.clone(), major.inner.clone());
         Self { inner: merged }
     }
-    
+
     fn __len__(&self) -> usize {
         self.inner.len()
     }
