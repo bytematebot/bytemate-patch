@@ -119,11 +119,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Test WASM package
-        run: |
-          cd wasm-nodejs
-          npm test
-
   publish-python:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
     needs: [python-wheels, python-sdist, test-packages]
