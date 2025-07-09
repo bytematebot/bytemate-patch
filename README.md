@@ -43,6 +43,7 @@ High-performance JSON patch library for **Rust**, **Python**, and **JavaScript**
 - [Performance Tips](#performance-tips)
 - [Migration Guide](#migration-guide)
 - [Platform Support](#platform-support)
+- [Acknowledgments](#acknowledgments)
 
 
 ## The Problem
